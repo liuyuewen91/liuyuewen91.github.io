@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+html {
+  margin-top: 45px;
+}
+
+body {
+  font-family: 'Source Code Pro', monospace;
+  font-size: 14px;
+  font-weight: 400;
+  height: 100%;
+  background-color: #2F2F2F;
+}
+
+p {
+  font-size: 30px;
+  text-align: center;
+  color: #8BD335;
+}
+
+h3 {
+  text-align: center;
+  color: #a7abb1;
+  font-size: 25px;
+  font-weight: 200;
+}
+
+h1 {
+  text-align: center;
+  color: #ffffff;
+  font-size: 45px;
+  font-weight: 200;
+  margin-top: -25px;
+}
+
+@media (min-width: 600px) and (max-width: 800px) {
+  html { background: red; }
+}
+
+#h {
+  margin-left: 10px;
+}
+
+</style>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-135514916-1');
+</script>
+
+</head>
+<body>
+<h3> <span id="d">Days</span> <span id="h">Hours</span> <span id="m">Mins</span> <span id="s">Secs</span></h3>
+<h1 id="timer"></h1>
+<p>Din Pachi Bhetaula SanePane ❤️</p>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Jul 13, 2019 05:40:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get todays date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  if (days < 10 ) {
+    var days = '0' + days;
+  }
+
+  if (hours < 10 ) {
+    hours = '0' + hours;
+  }
+
+  if ( minutes < 10 ) {
+    var minutes = '0' + minutes;
+  }
+
+  if ( seconds < 10 ) {
+    var seconds = '0' + seconds;
+  }
+
+  // Output the result in an element with id="demo"
+  document.getElementById("timer").innerHTML = days + ":" + hours + ":" +  minutes + ":" + seconds ;
+
+  // If the count down is over, write some text
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("timer").innerHTML = "FINALLY WE ARE TOGETHER";
+  }
+}, 1000);
+</script>
+
+</body>
+</html>
