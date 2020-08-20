@@ -1,0 +1,80 @@
+baseURL = "https://liuyuewen91.github.io/"
+title = "Yuewen's Blog"
+languageCode = "zh-hans"
+theme = "hermit"
+googleAnalytics = "UA-175890360-1"
+enableRobotsTXT = true
+enableEmoji = true
+disqusShortname = "liuyuewen91-github-io"
+paginate = 5
+rssLimit = 20
+hasCJKLanguage = true
+pygmentsCodefences = true
+pygmentsUseClasses  = true
+pygmentsCodefencesGuessSyntax = true
+pygmentsStyle = "dracula"
+defaultContentDir = "post"
+
+enableGitInfo = true
+
+[sitemap]
+  changefreq = "weekly"
+  priority = 0.5
+  filename = "sitemap.xml"
+
+[author]
+  name = "uewen"
+
+[taxonomies]
+  tag = "tags"
+
+[params]
+  dateform        = "Jan 2, 2020"
+  dateformShort   = "Jan 2"
+  dateformNum     = "2020-01-02"
+  dateformNumTime = "2020-01-02 15:04"
+
+  gitUrl = "https://github.com/liuyuewen91/liuyuewen91.github.io/commits/"
+
+  homeSubtitle = "Reliability, Scalability, Maintainability"
+
+  footerCopyright = ' &#183; <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
+
+  logoImage = "me.jpeg"
+  since = "2020"
+  homeFullContent = false
+  rssFullContent = true
+  archive-paginate = 10
+  dateFormatToUse = "20020-01-02"
+  moreMeta = true
+  showMenuLanguageChooser = true
+  showAuthorInfo = true
+  toc = true
+  photoswipe = true
+  keywords = ["cloudnative","devops","kubernetes","android","programming"]
+  description = "Yuewen's blog, embracing cloud-native!"
+
+  [[params.social]]
+    name = "github"
+    url = "https://github.com/liuyuewen91"
+
+
+  [[params.social]]
+    name = "email"
+    url = "liuyuewen91@gmail.com"
+
+[params.meta]
+  description = "Yuewen's Blog"
+  keywords = "cloudnative,devops,kubernetes,android,programming"
+
+[menu]
+
+  [[menu.main]]
+    name = "文章"
+    url = "posts/"
+    weight = 10
+
+    [[menu.main]]
+    name = "关于"
+    url = "about/"
+    weight = 20
