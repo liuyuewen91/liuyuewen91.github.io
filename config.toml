@@ -14,7 +14,7 @@ pygmentsUseClasses  = true
 pygmentsCodefencesGuessSyntax = true
 pygmentsStyle = "dracula"
 defaultContentDir = "posts"
-
+publishdir= "docs"
 enableGitInfo = true
 
 [sitemap]
