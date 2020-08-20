@@ -13,7 +13,7 @@ pygmentsCodefences = true
 pygmentsUseClasses  = true
 pygmentsCodefencesGuessSyntax = true
 pygmentsStyle = "dracula"
-defaultContentDir = "post"
+defaultContentDir = "posts"
 
 enableGitInfo = true
 
@@ -23,7 +23,7 @@ enableGitInfo = true
   filename = "sitemap.xml"
 
 [author]
-  name = "uewen"
+  name = "yuewen"
 
 [taxonomies]
   tag = "tags"
