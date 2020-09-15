@@ -3,33 +3,33 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://liuyuewen91.github.io/posts/my-first-post/</loc>
+    <loc>https://yue-wen.github.io/posts/my-first-post/</loc>
     <lastmod>2020-08-20T14:59:55+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://liuyuewen91.github.io/posts/</loc>
+    <loc>https://yue-wen.github.io/posts/</loc>
     <lastmod>2020-08-20T14:59:55+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://liuyuewen91.github.io/</loc>
+    <loc>https://yue-wen.github.io/</loc>
     <lastmod>2020-08-20T14:59:55+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://liuyuewen91.github.io/about/</loc>
+    <loc>https://yue-wen.github.io/about/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://liuyuewen91.github.io/tags/</loc>
+    <loc>https://yue-wen.github.io/tags/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

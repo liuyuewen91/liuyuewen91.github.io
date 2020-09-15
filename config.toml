@@ -1,11 +1,11 @@
-baseURL = "https://liuyuewen91.github.io/"
+baseURL = "https://yue-wen.github.io/"
 title = "Yuewen's Blog"
 languageCode = "zh-hans"
 theme = "hermit"
 googleAnalytics = "UA-175890360-1"
 enableRobotsTXT = true
 enableEmoji = true
-disqusShortname = "liuyuewen91-github-io"
+disqusShortname = "yue-wen-github-io"
 paginate = 5
 rssLimit = 20
 hasCJKLanguage = true
@@ -34,7 +34,7 @@ enableGitInfo = true
   dateformNum     = "2020-01-02"
   dateformNumTime = "2020-01-02 15:04"
 
-  gitUrl = "https://github.com/liuyuewen91/liuyuewen91.github.io/commits/"
+  gitUrl = "https://github.com/yue-wen/yue-wen.github.io/commits/"
 
   homeSubtitle = "Reliability, Scalability, Maintainability"
 
