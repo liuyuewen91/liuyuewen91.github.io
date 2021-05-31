@@ -14,7 +14,7 @@ fields other than 'replicas', 'template', and 'updateStrategy' are forbidden"
 ```
 
 Solution:
-1. kubectl delete statefulset --namespace <name_space> <statefulset_name> --cascade=false
+1. `kubectl delete statefulset --namespace <name_space> <statefulset_name> --cascade=false`
 2. update statefulset
 3. delete old pods
 

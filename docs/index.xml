@@ -6,11 +6,7 @@
     <description>Recent content on Yuewen&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-hans</language>
-    <lastBuildDate>Thu, 20 Aug 2020 14:38:23 +0800</lastBuildDate>
-    
-	<atom:link href="https://yue-wen.github.io/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 20 Aug 2020 14:38:23 +0800</lastBuildDate><atom:link href="https://yue-wen.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Learning Notes</title>
       <link>https://yue-wen.github.io/posts/notes/</link>
@@ -19,7 +15,7 @@
       <guid>https://yue-wen.github.io/posts/notes/</guid>
       <description>Update statefulset forbidden filed Error message:
 spec: Forbidden: updates to statefulset spec for fields other than &amp;#39;replicas&amp;#39;, &amp;#39;template&amp;#39;, and &amp;#39;updateStrategy&amp;#39; are forbidden&amp;#34; Solution:
- kubectl delete statefulset &amp;ndash;namespace &amp;lt;name_space&amp;gt; &amp;lt;statefulset_name&amp;gt; &amp;ndash;cascade=false update statefulset delete old pods  --cascade=true: If true, cascade the deletion of the resources managed by this resource (e.g. Pods created by a ReplicationController). Default true.</description>
+ kubectl delete statefulset --namespace &amp;lt;name_space&amp;gt; &amp;lt;statefulset_name&amp;gt; --cascade=false update statefulset delete old pods  --cascade=true: If true, cascade the deletion of the resources managed by this resource (e.g. Pods created by a ReplicationController). Default true.</description>
     </item>
     
     <item>
