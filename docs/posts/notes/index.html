@@ -8,23 +8,29 @@
 <meta itemprop="name" content="Learning Notes">
 <meta itemprop="description" content="Update statefulset forbidden filed Error message:
 spec: Forbidden: updates to statefulset spec for fields other than &#39;replicas&#39;, &#39;template&#39;, and &#39;updateStrategy&#39; are forbidden&#34; Solution:
- kubectl delete statefulset --namespace &lt;name_space&gt; &lt;statefulset_name&gt; --cascade=false update statefulset delete old pods  --cascade=true: If true, cascade the deletion of the resources managed by this resource (e.g. Pods created by a ReplicationController). Default true."><meta itemprop="datePublished" content="2020-08-20T14:38:23&#43;08:00" />
-<meta itemprop="dateModified" content="2020-10-06T14:05:48&#43;08:00" />
-<meta itemprop="wordCount" content="56">
+ kubectl delete statefulset --namespace &lt;name_space&gt; &lt;statefulset_name&gt; --cascade=false update statefulset delete old pods  --cascade=true: If true, cascade the deletion of the resources managed by this resource (e.g. Pods created by a ReplicationController). Default true.
+helm 3 release status stuck in pending-* Error message:
+$ helm list -a NAME	NAMESPACE	REVISION	UPDATED STATUS CHART APP VERSION test	default 1 2021-05-04 20:40:09."><meta itemprop="datePublished" content="2020-08-20T14:38:23&#43;08:00" />
+<meta itemprop="dateModified" content="2021-05-31T10:03:25&#43;08:00" />
+<meta itemprop="wordCount" content="101">
 <meta itemprop="keywords" content="" /><meta property="og:title" content="Learning Notes" />
 <meta property="og:description" content="Update statefulset forbidden filed Error message:
 spec: Forbidden: updates to statefulset spec for fields other than &#39;replicas&#39;, &#39;template&#39;, and &#39;updateStrategy&#39; are forbidden&#34; Solution:
- kubectl delete statefulset --namespace &lt;name_space&gt; &lt;statefulset_name&gt; --cascade=false update statefulset delete old pods  --cascade=true: If true, cascade the deletion of the resources managed by this resource (e.g. Pods created by a ReplicationController). Default true." />
+ kubectl delete statefulset --namespace &lt;name_space&gt; &lt;statefulset_name&gt; --cascade=false update statefulset delete old pods  --cascade=true: If true, cascade the deletion of the resources managed by this resource (e.g. Pods created by a ReplicationController). Default true.
+helm 3 release status stuck in pending-* Error message:
+$ helm list -a NAME	NAMESPACE	REVISION	UPDATED STATUS CHART APP VERSION test	default 1 2021-05-04 20:40:09." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://yue-wen.github.io/posts/notes/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2020-08-20T14:38:23&#43;08:00" />
-<meta property="article:modified_time" content="2020-10-06T14:05:48&#43;08:00" />
+<meta property="article:modified_time" content="2021-05-31T10:03:25&#43;08:00" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Learning Notes"/>
 <meta name="twitter:description" content="Update statefulset forbidden filed Error message:
 spec: Forbidden: updates to statefulset spec for fields other than &#39;replicas&#39;, &#39;template&#39;, and &#39;updateStrategy&#39; are forbidden&#34; Solution:
- kubectl delete statefulset --namespace &lt;name_space&gt; &lt;statefulset_name&gt; --cascade=false update statefulset delete old pods  --cascade=true: If true, cascade the deletion of the resources managed by this resource (e.g. Pods created by a ReplicationController). Default true."/>
+ kubectl delete statefulset --namespace &lt;name_space&gt; &lt;statefulset_name&gt; --cascade=false update statefulset delete old pods  --cascade=true: If true, cascade the deletion of the resources managed by this resource (e.g. Pods created by a ReplicationController). Default true.
+helm 3 release status stuck in pending-* Error message:
+$ helm list -a NAME	NAMESPACE	REVISION	UPDATED STATUS CHART APP VERSION test	default 1 2021-05-04 20:40:09."/>
 
 	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -73,7 +79,7 @@ spec: Forbidden: updates to statefulset spec for fields other than &#39;replicas
 				<h1>Learning Notes</h1>
 			</header>
 			<div class="content">
-				<h1 id="update-statefulset-forbidden-filed">Update statefulset forbidden filed<a href="#update-statefulset-forbidden-filed" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h1>
+				<h2 id="update-statefulset-forbidden-filed">Update statefulset forbidden filed<a href="#update-statefulset-forbidden-filed" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
 <p>Error message:</p>
 <div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">spec: Forbidden: updates to statefulset spec for 
 fields other than &#39;replicas&#39;, &#39;template&#39;, and &#39;updateStrategy&#39; are forbidden&#34;
@@ -84,13 +90,22 @@ fields other than &#39;replicas&#39;, &#39;template&#39;, and &#39;updateStrateg
 <li>delete old pods</li>
 </ol>
 <p><code>--cascade=true: If true, cascade the deletion of the resources managed by this resource (e.g. Pods created by a ReplicationController).  Default true.</code></p>
-
+<h2 id="helm-3-release-status-stuck-in-pending-">helm 3 release status stuck in <code>pending-*</code><a href="#helm-3-release-status-stuck-in-pending-" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+<p>Error message:</p>
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">$ helm list -a
+NAME	NAMESPACE	REVISION	UPDATED                                	STATUS         	CHART     	APP VERSION
+test	default  	1       	2021-05-04 20:40:09.827303259 +0000 UTC	pending-install	test-1.1.0	2.0.4
+</code></pre></div><p>Solution:</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">helm rollback &lt;release_name&gt; --namespace &lt;name_space&gt; &lt;last_revision_number&gt;
+</code></pre></div><p>example:</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">helm rollback <span class="nb">test</span> -n default <span class="m">1</span>
+</code></pre></div>
 			</div>
 			<hr class="post-end">
 			<footer class="post-info">
-				<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>56 Words</p>
+				<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>101 Words</p>
 				<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>20200-08-20 14:38</p>
-				<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-git-commit"><circle cx="12" cy="12" r="4"></circle><line x1="1.05" y1="12" x2="7" y2="12"></line><line x1="17.01" y1="12" x2="22.96" y2="12"></line></svg><a href="https://github.com/yue-wen/yue-wen.github.io/commits/a1ea4bc7dee91c7a25d984b531673874a9fac2de" target="_blank" rel="noopener">a1ea4bc</a> @ 6060-10-06</p>
+				<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-git-commit"><circle cx="12" cy="12" r="4"></circle><line x1="1.05" y1="12" x2="7" y2="12"></line><line x1="17.01" y1="12" x2="22.96" y2="12"></line></svg><a href="https://github.com/yue-wen/yue-wen.github.io/commits/33d6b796fb721535a734658f8ba4571fb7d3b716" target="_blank" rel="noopener">33d6b79</a> @ 31310-05-31</p>
 			</footer>
 		</article>
 		<div class="post-nav thin">

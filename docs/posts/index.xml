@@ -16,8 +16,10 @@
 			<guid>https://yue-wen.github.io/posts/notes/</guid>
 			<description>Update statefulset forbidden filed Error message:
 spec: Forbidden: updates to statefulset spec for fields other than &amp;#39;replicas&amp;#39;, &amp;#39;template&amp;#39;, and &amp;#39;updateStrategy&amp;#39; are forbidden&amp;#34; Solution:
- kubectl delete statefulset --namespace &amp;lt;name_space&amp;gt; &amp;lt;statefulset_name&amp;gt; --cascade=false update statefulset delete old pods  --cascade=true: If true, cascade the deletion of the resources managed by this resource (e.g. Pods created by a ReplicationController). Default true.</description>
-			<content type="html"><![CDATA[<h1 id="update-statefulset-forbidden-filed">Update statefulset forbidden filed</h1>
+ kubectl delete statefulset --namespace &amp;lt;name_space&amp;gt; &amp;lt;statefulset_name&amp;gt; --cascade=false update statefulset delete old pods  --cascade=true: If true, cascade the deletion of the resources managed by this resource (e.g. Pods created by a ReplicationController). Default true.
+helm 3 release status stuck in pending-* Error message:
+$ helm list -a NAME	NAMESPACE	REVISION	UPDATED STATUS CHART APP VERSION test	default 1 2021-05-04 20:40:09.</description>
+			<content type="html"><![CDATA[<h2 id="update-statefulset-forbidden-filed">Update statefulset forbidden filed</h2>
 <p>Error message:</p>
 <div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">spec: Forbidden: updates to statefulset spec for 
 fields other than &#39;replicas&#39;, &#39;template&#39;, and &#39;updateStrategy&#39; are forbidden&#34;
@@ -28,7 +30,16 @@ fields other than &#39;replicas&#39;, &#39;template&#39;, and &#39;updateStrateg
 <li>delete old pods</li>
 </ol>
 <p><code>--cascade=true: If true, cascade the deletion of the resources managed by this resource (e.g. Pods created by a ReplicationController).  Default true.</code></p>
-]]></content>
+<h2 id="helm-3-release-status-stuck-in-pending-">helm 3 release status stuck in <code>pending-*</code></h2>
+<p>Error message:</p>
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">$ helm list -a
+NAME	NAMESPACE	REVISION	UPDATED                                	STATUS         	CHART     	APP VERSION
+test	default  	1       	2021-05-04 20:40:09.827303259 +0000 UTC	pending-install	test-1.1.0	2.0.4
+</code></pre></div><p>Solution:</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">helm rollback &lt;release_name&gt; --namespace &lt;name_space&gt; &lt;last_revision_number&gt;
+</code></pre></div><p>example:</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">helm rollback <span class="nb">test</span> -n default <span class="m">1</span>
+</code></pre></div>]]></content>
 		</item>
 		
 	</channel>
